@@ -10,8 +10,8 @@ from pages.home_page import HomePage
 class TestValidLogin(BaseTest):
     @pytest.mark.run(order=1)
     def test_validlogin(self):
-        un=Excel.get_cellvalue("../data/input.xlsx","ValidLogin",2,1)
-        pw=Excel.get_cellvalue("../data/input.xlsx","ValidLogin",2,2)
+        un=Excel.get_cellvalue("./data/input.xlsx","ValidLogin",2,1)
+        pw=Excel.get_cellvalue("./data/input.xlsx","ValidLogin",2,2)
         loginpage = LoginPage(self.driver)
         # 1. Enter valid username
         loginpage.set_username(un)

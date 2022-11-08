@@ -8,8 +8,8 @@ from pages.login_page import LoginPage
 class TestInvalidLogin(BaseTest):
     @pytest.mark.run(order=2)
     def test_invlidlogin(self):
-        un=Excel.get_cellvalue("../data/input.xlsx","InvalidLogin",2,1)
-        pw=Excel.get_cellvalue("../data/input.xlsx","InvalidLogin",2,2)
+        un=Excel.get_cellvalue("./data/input.xlsx","InvalidLogin",2,1)
+        pw=Excel.get_cellvalue("./data/input.xlsx","InvalidLogin",2,2)
         # 1. Enter invalid un
         loginpage=LoginPage(self.driver)
         loginpage.set_username(un)
